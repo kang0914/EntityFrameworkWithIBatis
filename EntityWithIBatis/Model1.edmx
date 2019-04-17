@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TEMP.BIZ.DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MM_CODE">
+          <Key>
+            <PropertyRef Name="GROUP_CODE" />
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="GROUP_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GROUP_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATA1" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATA2" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATA3" Type="nvarchar" MaxLength="50" />
+          <Property Name="IUSER" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDATE" Type="datetime" />
+          <Property Name="DUSER" Type="nvarchar" MaxLength="50" />
+          <Property Name="DDATE" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="TEMPBIZDBModelStoreContainer">
+          <EntitySet Name="MM_CODE" EntityType="Self.MM_CODE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TEMP.BIZ.DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MM_CODE">
+          <Key>
+            <PropertyRef Name="GROUP_CODE" />
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="GROUP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATA1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATA2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATA3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDATE" Type="DateTime" Precision="3" />
+          <Property Name="DUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MM_CODE" EntityType="Self.MM_CODE" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TEMPBIZDBModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="MM_CODE">
+            <EntityTypeMapping TypeName="TEMP.BIZ.DBModel.MM_CODE">
+              <MappingFragment StoreEntitySet="MM_CODE">
+                <ScalarProperty Name="GROUP_CODE" ColumnName="GROUP_CODE" />
+                <ScalarProperty Name="GROUP_NAME" ColumnName="GROUP_NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DATA1" ColumnName="DATA1" />
+                <ScalarProperty Name="DATA2" ColumnName="DATA2" />
+                <ScalarProperty Name="DATA3" ColumnName="DATA3" />
+                <ScalarProperty Name="IUSER" ColumnName="IUSER" />
+                <ScalarProperty Name="IDATE" ColumnName="IDATE" />
+                <ScalarProperty Name="DUSER" ColumnName="DUSER" />
+                <ScalarProperty Name="DDATE" ColumnName="DDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

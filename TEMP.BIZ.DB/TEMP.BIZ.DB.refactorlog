@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="8ee2e807-c194-42e7-a5cc-b290d861dd80" ChangeDateTime="04/17/2019 12:28:14">
+    <Property Name="ElementName" Value="[dbo].[MM_CODE].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MM_CODE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GROUP_CODE" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="35a42943-1e77-47d5-bc83-75f557dd9ec1" ChangeDateTime="04/17/2019 12:29:08">
+    <Property Name="ElementName" Value="[dbo].[MM_CODE].[IDATE]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[MM_CODE]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IUSER" />
+  </Operation>
+</Operations>
