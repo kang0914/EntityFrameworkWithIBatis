@@ -12,24 +12,7 @@ namespace EntityWithIBatis.DBContexts
             : base("name=TEMP_BIZ_DBContext")
         {
         }
-
-        public TEMP_BIZ_DBContext(DbConnection existingConnection, bool contextOwnsConnection)
-           : base(existingConnection, contextOwnsConnection)
-        {
-        }
-
-        public TEMP_BIZ_DBContext(DbConnection existingConnection, bool contextOwnsConnection, DbTransaction transaction)
-           : base(existingConnection, contextOwnsConnection)
-        {
-            this.Database.UseTransaction(transaction);
-        }
-
-        public TEMP_BIZ_DBContext(IBatisNet.DataMapper.ISqlMapSession sqlMapSession)
-            : base((DbConnection)sqlMapSession.Connection, false)
-        {
-            this.Database.UseTransaction((DbTransaction)sqlMapSession.Transaction);
-        }
-
+        
         public virtual DbSet<MM_CODE> MM_CODE { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

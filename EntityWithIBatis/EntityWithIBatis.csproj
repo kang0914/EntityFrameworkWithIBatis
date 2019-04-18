@@ -63,6 +63,7 @@
     <Compile Include="DBContexts\TEMP_BIZ_DBContext.cs" />
     <Compile Include="MainService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TEMP_BIZ_DBContextExtentions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
