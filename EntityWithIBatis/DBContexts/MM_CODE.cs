@@ -24,6 +24,11 @@ namespace EntityWithIBatis.DBContexts
         [StringLength(50)]
         public string NAME { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int REV_NO { get; set; }
+
         [StringLength(50)]
         public string DATA1 { get; set; }
 

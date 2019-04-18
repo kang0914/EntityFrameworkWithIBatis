@@ -13,9 +13,10 @@ namespace EntityWithIBatis.UnitTest
             MainService mainService = new MainService();
 
             // 작업
-            mainService.Test();
+            var results = mainService.GetMM_CODE();
 
             // 확인
+            Assert.IsTrue(results != null);
         }
 
         [TestMethod]
@@ -25,9 +26,10 @@ namespace EntityWithIBatis.UnitTest
             MainService mainService = new MainService();
 
             // 작업
-            mainService.MM_CODE_SELECT();
+            var results = mainService.MM_CODE_SELECT();
 
             // 확인
+            Assert.IsTrue(results != null);
         }
 
         [TestMethod]
@@ -37,7 +39,7 @@ namespace EntityWithIBatis.UnitTest
             MainService mainService = new MainService();
 
             // 작업
-            mainService.MixTest();
+            mainService.UpdateMM_CODE("G1", "취1", "C1", "코1", null, null, null, "admin");
 
             // 확인
         }

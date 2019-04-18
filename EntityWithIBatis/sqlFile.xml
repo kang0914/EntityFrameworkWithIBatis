@@ -8,8 +8,8 @@
 
     <update id="MM_CODE.INSERT" parameterClass="EntityWithIBatis.DBContexts.MM_CODE">
       <![CDATA[
-      INSERT INTO MM_CODE ( GROUP_CODE, GROUP_NAME, CODE, NAME, DATA1, DATA2, DATA3, IUSER, IDATE, DUSER, DDATE) 
-                   VALUES (#GROUP_CODE#, #GROUP_NAME#, #CODE#, #NAME#, #DATA1#, #DATA2#, #DATA3#, #IUSER#, #IDATE#, #DUSER#, #DDATE#)
+      INSERT INTO MM_CODE ( GROUP_CODE, GROUP_NAME, CODE, NAME, REV_NO, DATA1, DATA2, DATA3, IUSER, IDATE, DUSER, DDATE) 
+                   VALUES (#GROUP_CODE#, #GROUP_NAME#, #CODE#, #NAME#, #REV_NO#, #DATA1#, #DATA2#, #DATA3#, #IUSER#, #IDATE#, #DUSER#, #DDATE#)
       ]]>
     </update>
 
