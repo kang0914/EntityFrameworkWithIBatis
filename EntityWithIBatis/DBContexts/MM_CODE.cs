@@ -1,4 +1,4 @@
-namespace EntityWithIBatis
+namespace EntityWithIBatis.DBContexts
 {
     using System;
     using System.Collections.Generic;

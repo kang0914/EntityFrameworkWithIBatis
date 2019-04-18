@@ -2,9 +2,16 @@
 <sqlMap namespace="MyBatisApp" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
   <statements>
 
-    <select id="MM_CODE.SELECT" parameterClass="System.Collections.Hashtable" resultClass="EntityWithIBatis.MM_CODE">
+    <select id="MM_CODE.SELECT" parameterClass="System.Collections.Hashtable" resultClass="EntityWithIBatis.DBContexts.MM_CODE">
       SELECT * FROM MM_CODE
     </select>
+
+    <update id="MM_CODE.INSERT" parameterClass="EntityWithIBatis.DBContexts.MM_CODE">
+      <![CDATA[
+      INSERT INTO MM_CODE ( GROUP_CODE, GROUP_NAME, CODE, NAME, DATA1, DATA2, DATA3, IUSER, IDATE, DUSER, DDATE) 
+                   VALUES (#GROUP_CODE#, #GROUP_NAME#, #CODE#, #NAME#, #DATA1#, #DATA2#, #DATA3#, #IUSER#, #IDATE#, #DUSER#, #DDATE#)
+      ]]>
+    </update>
 
   </statements>
 </sqlMap>

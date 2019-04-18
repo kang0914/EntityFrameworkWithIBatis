@@ -1,4 +1,4 @@
-namespace EntityWithIBatis
+namespace EntityWithIBatis.DBContexts
 {
     using System;
     using System.Data.Entity;
@@ -6,15 +6,15 @@ namespace EntityWithIBatis
     using System.Linq;
     using System.Data.Common;
 
-    public partial class Model2 : DbContext
+    public partial class TEMP_BIZ_DBContext : DbContext
     {
-        public Model2()
-            : base("name=Model2")
+        public TEMP_BIZ_DBContext()
+            : base("name=TEMP_BIZ_DBContext")
         {
         }
 
-        public Model2(DbConnection existingConnection, bool contextOwnsConnection)
-               : base(existingConnection, contextOwnsConnection)
+        public TEMP_BIZ_DBContext(DbConnection existingConnection, bool contextOwnsConnection)
+           : base(existingConnection, contextOwnsConnection)
         {
         }
 
