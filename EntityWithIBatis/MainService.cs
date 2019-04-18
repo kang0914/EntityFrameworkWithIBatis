@@ -33,12 +33,10 @@ namespace EntityWithIBatis
         {
             try
             {
-                using (var session = EntityMapper.BeginTransaction())
-                using (var ctx = new TEMP_BIZ_DBContext((DbConnection)session.Connection, false))
+                using (var session = EntityMapper.BeginTransaction())                
+                using (var context = new TEMP_BIZ_DBContext(session))
                 {
-                    ctx.Database.UseTransaction((DbTransaction)session.Transaction);
-
-                    var findMM_CODE = ctx.MM_CODE.ToList();
+                    var findMM_CODE = context.MM_CODE.ToList();
 
                     // EntityFramework
                     MM_CODE newModel = new MM_CODE()
@@ -55,8 +53,8 @@ namespace EntityWithIBatis
                         DUSER = null,
                         DDATE = null
                     };
-                    ctx.MM_CODE.Add(newModel);
-                    ctx.SaveChanges();
+                    context.MM_CODE.Add(newModel);
+                    context.SaveChanges();
 
                     // iBatis.NET
                     MM_CODE newModel2 = new MM_CODE()
